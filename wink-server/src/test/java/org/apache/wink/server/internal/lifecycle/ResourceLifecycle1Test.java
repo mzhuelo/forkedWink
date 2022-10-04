@@ -19,7 +19,7 @@
 
 package org.apache.wink.server.internal.lifecycle;
 
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 import javax.ws.rs.core.Response.Status;
 
 import org.apache.wink.common.RuntimeContext;

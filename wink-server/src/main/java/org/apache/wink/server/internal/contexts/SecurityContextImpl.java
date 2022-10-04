@@ -22,7 +22,7 @@ package org.apache.wink.server.internal.contexts;
 
 import java.security.Principal;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.SecurityContext;
 
 import org.apache.wink.server.handlers.MessageContext;

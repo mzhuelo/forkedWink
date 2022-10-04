@@ -25,9 +25,9 @@ import java.util.Formatter;
 import java.util.List;
 import java.util.Properties;
 
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpServletResponseWrapper;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponseWrapper;
 import javax.ws.rs.core.MultivaluedMap;
 
 import org.apache.wink.common.internal.MultivaluedMapImpl;

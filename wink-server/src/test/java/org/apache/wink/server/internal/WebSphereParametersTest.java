@@ -22,7 +22,7 @@ package org.apache.wink.server.internal;
 
 import java.util.Arrays;
 
-import javax.servlet.ServletRequest;
+import jakarta.servlet.ServletRequest;
 
 import junit.framework.TestCase;
 

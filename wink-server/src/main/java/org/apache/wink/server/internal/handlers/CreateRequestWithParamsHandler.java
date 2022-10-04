@@ -24,8 +24,8 @@ package org.apache.wink.server.internal.handlers;
 //import java.util.HashMap;
 //import java.util.Map;
 //
-//import javax.servlet.http.HttpServletRequest;
-//import javax.servlet.http.HttpServletRequestWrapper;
+//import jakarta.servlet.http.HttpServletRequest;
+//import jakarta.servlet.http.HttpServletRequestWrapper;
 
 import org.apache.wink.server.handlers.AbstractHandler;
 import org.apache.wink.server.handlers.MessageContext;

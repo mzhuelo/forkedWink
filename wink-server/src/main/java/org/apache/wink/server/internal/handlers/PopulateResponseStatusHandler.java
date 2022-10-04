@@ -19,7 +19,7 @@
  *******************************************************************************/
 package org.apache.wink.server.internal.handlers;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.Response;
 

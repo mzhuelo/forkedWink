@@ -23,7 +23,7 @@ package org.apache.wink.server.internal.application;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import org.apache.wink.common.internal.application.ApplicationFileLoader;
 import org.apache.wink.common.internal.application.SimpleWinkApplication;

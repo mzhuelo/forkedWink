@@ -22,7 +22,7 @@ package org.apache.wink.server.utils;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 import javax.ws.rs.core.Application;
 
 import org.apache.wink.common.WinkApplication;

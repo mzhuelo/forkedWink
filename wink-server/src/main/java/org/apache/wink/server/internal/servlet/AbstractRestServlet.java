@@ -19,8 +19,8 @@
  *******************************************************************************/
 package org.apache.wink.server.internal.servlet;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
 
 import org.apache.wink.server.internal.RequestProcessor;
 import org.slf4j.Logger;

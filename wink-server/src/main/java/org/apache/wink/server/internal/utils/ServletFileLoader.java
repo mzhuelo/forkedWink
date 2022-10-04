@@ -22,7 +22,7 @@ package org.apache.wink.server.internal.utils;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import org.apache.wink.common.internal.utils.FileLoader;
 import org.slf4j.Logger;
