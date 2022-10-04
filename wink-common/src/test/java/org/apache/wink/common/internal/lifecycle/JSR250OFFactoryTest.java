@@ -19,8 +19,8 @@
  *******************************************************************************/
 package org.apache.wink.common.internal.lifecycle;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import javax.ws.rs.Path;
 import javax.ws.rs.ext.Provider;
 
