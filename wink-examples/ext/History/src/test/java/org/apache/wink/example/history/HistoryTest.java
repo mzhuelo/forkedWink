@@ -27,7 +27,7 @@ import java.io.StringReader;
 import java.util.Collections;
 import java.util.Comparator;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 import javax.ws.rs.core.MediaType;
 
 import org.apache.wink.common.model.atom.AtomEntry;

@@ -454,7 +454,7 @@ public class JAXRSMessageBodyReadersTest extends TestCase {
 
             String response = postMethod.getResponseBodyAsString();
             // assertLogContainsException(response,
-            // "javax.servlet.ServletException");
+            // "jakarta.servlet.ServletException");
         } finally {
             postMethod.releaseConnection();
         }
@@ -929,7 +929,7 @@ public class JAXRSMessageBodyReadersTest extends TestCase {
 
             String response = postMethod.getResponseBodyAsString();
             // assertLogContainsException(response,
-            // "javax.servlet.ServletException");
+            // "jakarta.servlet.ServletException");
         } finally {
             postMethod.releaseConnection();
         }
@@ -1020,7 +1020,7 @@ public class JAXRSMessageBodyReadersTest extends TestCase {
 
             String response = postMethod.getResponseBodyAsString();
             // assertLogContainsException(response,
-            // "javax.servlet.ServletException");
+            // "jakarta.servlet.ServletException");
         } finally {
             postMethod.releaseConnection();
         }

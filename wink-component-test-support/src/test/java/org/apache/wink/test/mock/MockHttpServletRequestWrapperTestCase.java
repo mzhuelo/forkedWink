@@ -20,7 +20,7 @@
 
 package org.apache.wink.test.mock;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import junit.framework.Assert;
 

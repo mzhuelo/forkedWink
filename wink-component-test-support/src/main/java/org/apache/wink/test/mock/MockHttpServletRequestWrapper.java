@@ -28,7 +28,7 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.ServletInputStream;
+import jakarta.servlet.ServletInputStream;
 import javax.ws.rs.core.MediaType;
 
 import org.springframework.mock.web.MockHttpServletRequest;

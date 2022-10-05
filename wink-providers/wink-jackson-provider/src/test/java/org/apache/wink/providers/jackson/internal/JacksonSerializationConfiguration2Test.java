@@ -22,7 +22,7 @@ package org.apache.wink.providers.jackson.internal;
 
 import java.util.Random;
 
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;

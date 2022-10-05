@@ -61,7 +61,7 @@ public class JAXRSMessageBodyReaderExceptionsTest extends TestCase {
         try {
             client.executeMethod(postMethod);
             assertEquals(500, postMethod.getStatusCode());
-            // assertLogContainsException("javax.servlet.ServletException");
+            // assertLogContainsException("jakarta.servlet.ServletException");
         } finally {
             postMethod.releaseConnection();
         }
@@ -146,7 +146,7 @@ public class JAXRSMessageBodyReaderExceptionsTest extends TestCase {
         try {
             client.executeMethod(postMethod);
             assertEquals(500, postMethod.getStatusCode());
-            // assertLogContainsException("javax.servlet.ServletException");
+            // assertLogContainsException("jakarta.servlet.ServletException");
         } finally {
             postMethod.releaseConnection();
         }

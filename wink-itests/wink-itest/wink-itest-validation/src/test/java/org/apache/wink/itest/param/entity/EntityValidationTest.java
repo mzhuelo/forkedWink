@@ -49,7 +49,7 @@ public class EntityValidationTest extends TestCase {
             // .assertInstallLogContainsException("Uncaught exception created in one of the service methods "
             // + "of the servlet jaxrs.tests.validation.param.entity in "
             // + "application jaxrs.tests.validation.param.entity. "
-            // + "Exception created : javax.servlet.ServletException: An error "
+            // + "Exception created : jakarta.servlet.ServletException: An error "
             // + "occurred validating JAX-RS artifacts in the application.");
             // }
         } finally {

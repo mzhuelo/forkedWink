@@ -19,7 +19,7 @@
  *******************************************************************************/
 package org.apache.wink.spring.internal;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import org.apache.wink.server.internal.DeploymentConfiguration;
 import org.apache.wink.server.internal.RequestProcessor;
