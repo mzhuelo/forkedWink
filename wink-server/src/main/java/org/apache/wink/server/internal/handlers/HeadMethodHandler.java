@@ -25,6 +25,7 @@ import java.io.PrintWriter;
 import java.util.Properties;
 
 import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.WriteListener;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpServletResponseWrapper;
 import javax.ws.rs.HttpMethod;
@@ -144,6 +145,18 @@ public class HeadMethodHandler implements RequestHandler, ResponseHandler {
             public void write(byte b[], int off, int len) throws IOException {
                 byteCount += len;
             }
+
+			@Override
+			public boolean isReady() {
+				// TODO Auto-generated method stub
+				return false;
+			}
+
+			@Override
+			public void setWriteListener(WriteListener writeListener) {
+				// TODO Auto-generated method stub
+				
+			}
 
         } // class CountingStream
 

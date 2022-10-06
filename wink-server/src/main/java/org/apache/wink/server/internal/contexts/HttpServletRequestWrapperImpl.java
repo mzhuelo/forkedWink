@@ -23,17 +23,26 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.Principal;
+import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Locale;
 import java.util.Map;
 
+import jakarta.servlet.AsyncContext;
+import jakarta.servlet.DispatcherType;
 import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletInputStream;
 import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletRequestWrapper;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpUpgradeHandler;
+import jakarta.servlet.http.Part;
 
 import org.apache.wink.common.RuntimeContext;
 import org.apache.wink.common.internal.runtime.RuntimeContextTLS;
@@ -572,6 +581,67 @@ public class HttpServletRequestWrapperImpl extends HttpServletRequestWrapper {
         public void setCharacterEncoding(String arg0) throws UnsupportedEncodingException {
             throw new IllegalStateException();
         }
+
+		public long getContentLengthLong() {
+            throw new IllegalStateException();
+		}
+
+		public ServletContext getServletContext() {
+            throw new IllegalStateException();
+		}
+
+		public AsyncContext startAsync() throws IllegalStateException {
+            throw new IllegalStateException();
+		}
+
+		public AsyncContext startAsync(ServletRequest servletRequest, ServletResponse servletResponse)
+				throws IllegalStateException {
+            throw new IllegalStateException();
+		}
+
+		public boolean isAsyncStarted() {
+            throw new IllegalStateException();
+		}
+
+		public boolean isAsyncSupported() {
+            throw new IllegalStateException();
+		}
+
+		public AsyncContext getAsyncContext() {
+            throw new IllegalStateException();
+		}
+
+		public DispatcherType getDispatcherType() {
+            throw new IllegalStateException();
+		}
+
+		public String changeSessionId() {
+            throw new IllegalStateException();
+		}
+
+		public boolean authenticate(HttpServletResponse response) throws IOException, ServletException {
+            throw new IllegalStateException();
+		}
+
+		public void login(String username, String password) throws ServletException {
+            throw new IllegalStateException();
+		}
+
+		public void logout() throws ServletException {
+            throw new IllegalStateException();
+		}
+
+		public Collection<Part> getParts() throws IOException, ServletException {
+            throw new IllegalStateException();
+		}
+
+		public Part getPart(String name) throws IOException, ServletException {
+            throw new IllegalStateException();
+		}
+
+		public <T extends HttpUpgradeHandler> T upgrade(Class<T> handlerClass) throws IOException, ServletException {
+            throw new IllegalStateException();
+		}
 
     }
 }

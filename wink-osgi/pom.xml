@@ -27,62 +27,63 @@
     </parent>
     <groupId>org.apache.wink</groupId>
     <artifactId>wink-osgi</artifactId>
-    <packaging>bundle</packaging>
     <name>Apache Wink :: OSGi</name>
     <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-                    </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <!-- <executions>
-                    <execution>
-                        <id>bundle-manifest</id>
-                        <phase>process-classes</phase>
-                        <goals>
-                            <goal>manifest</goal>
-                        </goals>
-                    </execution>
-                </executions> -->
-                <extensions>true</extensions>
-				<configuration>
-                    <instructions>
-                        <Export-Package>
-                          javax.ws.rs;version="1.1.1",javax.ws.rs.core;version="1.1.1",
-						  javax.ws.rs.ext;version="1.1.1", org.apache.wink.osgi
-                        </Export-Package>
-                        <Private-Package>
-                            org.apache.wink.osgi.internal
-                        </Private-Package>
-                        <Embed-Transitive>true</Embed-Transitive>
-                        <Embed-Dependency>
-                            wink-server, wink-common, activation, geronimo-jaxrs_1.1_spec,
-                            jaxb-api, geronimo-annotation_1.1_spec, stax-api
-                        </Embed-Dependency>
-                    </instructions>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-scr-plugin</artifactId>
-				<version>1.7.2</version>
-				<executions>
-					<execution>
-						<id>generate-scr-scrdescriptor</id>
-						<goals>
-							<goal>scr</goal>
-						</goals>
-					</execution>
-				</executions>
-            </plugin>
-        </plugins>
+    	<pluginManagement>
+        	<plugins>
+	            <plugin>
+                	<artifactId>maven-jar-plugin</artifactId>
+                	<configuration>
+	                    <archive>
+                        	<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+                    	</archive>
+                	</configuration>
+            	</plugin>
+            	<plugin>
+	                <groupId>org.apache.felix</groupId>
+                	<artifactId>maven-bundle-plugin</artifactId>
+                	<!-- <executions>
+	                    <execution>
+                        	<id>bundle-manifest</id>
+                        	<phase>process-classes</phase>
+                        	<goals>
+	                            <goal>manifest</goal>
+                        	</goals>
+                    	</execution>
+                	</executions> -->
+                	<extensions>true</extensions>
+					<configuration>
+	                    <instructions>
+                        	<Export-Package>
+                          	javax.ws.rs;version="1.1.1",javax.ws.rs.core;version="1.1.1",
+						  	javax.ws.rs.ext;version="1.1.1", org.apache.wink.osgi
+                        	</Export-Package>
+                        	<Private-Package>
+	                            org.apache.wink.osgi.internal
+                        	</Private-Package>
+                        	<Embed-Transitive>true</Embed-Transitive>
+                        	<Embed-Dependency>
+	                            wink-server, wink-common, activation, geronimo-jaxrs_1.1_spec,
+                            	jaxb-api, geronimo-annotation_1.1_spec, stax-api
+                        	</Embed-Dependency>
+                    	</instructions>
+                	</configuration>
+            	</plugin>
+            	<plugin>
+	                <groupId>org.apache.felix</groupId>
+                	<artifactId>maven-scr-plugin</artifactId>
+					<version>1.7.2</version>
+					<executions>
+						<execution>
+							<id>generate-scr-scrdescriptor</id>
+							<goals>
+								<goal>scr</goal>
+							</goals>
+						</execution>
+					</executions>
+            	</plugin>
+        	</plugins>	
+        </pluginManagement>
     </build>
     <dependencies>
         <dependency>
@@ -105,6 +106,12 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>
+        <dependency>
+    		<groupId>jakarta.servlet</groupId>
+    		<artifactId>jakarta.servlet-api</artifactId>
+    		<version>5.0.0</version>
+    		<scope>provided</scope>
+		</dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

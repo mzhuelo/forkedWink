@@ -21,6 +21,7 @@ package org.apache.wink.server.internal.log;
 import java.io.IOException;
 import java.util.Properties;
 
+import jakarta.servlet.ReadListener;
 import jakarta.servlet.ServletInputStream;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletRequestWrapper;
@@ -368,6 +369,24 @@ public class Requests implements RequestHandler {
         public int getLoggedByteBufferLength() {
             return offset;
         }
+
+		@Override
+		public boolean isFinished() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public boolean isReady() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public void setReadListener(ReadListener readListener) {
+			// TODO Auto-generated method stub
+			
+		}
 
     }
 }

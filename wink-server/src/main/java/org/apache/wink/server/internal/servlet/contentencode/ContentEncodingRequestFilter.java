@@ -30,6 +30,7 @@ import java.util.zip.InflaterInputStream;
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.FilterConfig;
+import jakarta.servlet.ReadListener;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletInputStream;
 import jakarta.servlet.ServletRequest;
@@ -173,6 +174,24 @@ public class ContentEncodingRequestFilter implements Filter {
         public long skip(long n) throws IOException {
             return is.skip(n);
         }
+
+		@Override
+		public boolean isFinished() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public boolean isReady() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public void setReadListener(ReadListener readListener) {
+			// TODO Auto-generated method stub
+			
+		}
     }
 
     static class GZIPDecoderInputStream extends DecoderServletInputStream {

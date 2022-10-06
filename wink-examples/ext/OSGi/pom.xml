@@ -21,7 +21,6 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>Osgi</artifactId>
-	<packaging>bundle</packaging>
 	<name>Apache Wink Examples Ext :: OSGi</name>
 	<parent>
 		<groupId>org.apache.wink.example</groupId>
@@ -34,43 +33,50 @@
 	</description>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-scr-plugin</artifactId>
-				<version>1.7.2</version>
-				<executions>
-					<execution>
-						<id>generate-scr-scrdescriptor</id>
-						<goals>
-							<goal>scr</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<extensions>true</extensions>
-				<configuration>
-				</configuration>
-			</plugin>
-			<plugin>
-		        <groupId>org.ops4j</groupId>
-		        <artifactId>maven-pax-plugin</artifactId>
-		        <version>1.5</version>
-		        <configuration>
-
-		          <provision>
-		            <param>--platform=felix</param>
-		            <param>--profiles=ds,log</param>
-		          </provision>
-		          <noDependencies>true</noDependencies>
-		          <!-- webconsole not needed, but handy -->
-                          <deployURLs>mvn:org.apache.felix/org.apache.felix.webconsole/3.1.8,mvn:org.apache.felix/org.apache.felix.http.jetty/2.2.0,mvn:org.apache.felix/org.apache.felix.http.whiteboard/2.2.0,mvn:org.apache.wink/wink-osgi/1.4.0-SNAPSHOT,mvn:commons-lang/commons-lang/2.5,mvn:org.apache.geronimo.specs/geronimo-osgi-registry/1.1</deployURLs>
-		        </configuration>
-		      </plugin>
-		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+    				<groupId>org.apache.maven.plugins</groupId>
+    				<artifactId>maven-war-plugin</artifactId>
+    				<version>3.3.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-scr-plugin</artifactId>
+					<version>1.7.2</version>
+					<executions>
+						<execution>
+							<id>generate-scr-scrdescriptor</id>
+							<goals>
+								<goal>scr</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-bundle-plugin</artifactId>
+					<extensions>true</extensions>
+					<configuration>
+					</configuration>
+				</plugin>
+				<plugin>
+			        <groupId>org.ops4j</groupId>
+		        	<artifactId>maven-pax-plugin</artifactId>
+		        	<version>1.5</version>
+		        	<configuration>
+	
+		          	<provision>
+			            <param>--platform=felix</param>
+		            	<param>--profiles=ds,log</param>
+		          	</provision>
+		          	<noDependencies>true</noDependencies>
+		          	<!-- webconsole not needed, but handy -->
+                          	<deployURLs>mvn:org.apache.felix/org.apache.felix.webconsole/3.1.8,mvn:org.apache.felix/org.apache.felix.http.jetty/2.2.0,mvn:org.apache.felix/org.apache.felix.http.whiteboard/2.2.0,mvn:org.apache.wink/wink-osgi/1.4.0-SNAPSHOT,mvn:commons-lang/commons-lang/2.5,mvn:org.apache.geronimo.specs/geronimo-osgi-registry/1.1</deployURLs>
+		        	</configuration>
+		      	</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 
 	<dependencies>

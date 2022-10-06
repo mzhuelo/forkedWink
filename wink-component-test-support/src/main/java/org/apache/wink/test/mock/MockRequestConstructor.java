@@ -109,7 +109,7 @@ public final class MockRequestConstructor {
     public static MockHttpServletRequest constructMockRequest(String method,
                                                               String requestURI,
                                                               String acceptHeader,
-                                                              Map<?, ?> parameters,
+                                                              Map<String, ?> parameters,
                                                               Map<String, Object> attributes) {
         MockHttpServletRequest mockRequest = constructMockRequest(method, requestURI, acceptHeader);
         if (attributes != null) {

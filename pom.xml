@@ -42,7 +42,16 @@
         <tomee.version>1.5.2</tomee.version>
         <arquillian.version>1.0.2.Final</arquillian.version>
         <maven.surefire.plugin.version>2.11</maven.surefire.plugin.version>
+        <pentaho-kettle.version>5.4.1.8-209</pentaho-kettle.version>
     </properties>
+    
+	<repositories>
+	    <repository>
+        	<id>pentaho-releases</id>
+        	<url>http://nexus.pentaho.org/content/groups/omni</url>
+    	</repository>
+	</repositories>
+
     <modules>
         <module>wink-component-test-support</module>
         <module>wink-common</module>
@@ -473,6 +482,12 @@
     -->
     <dependencyManagement>
         <dependencies>
+        	<dependency>
+	    		<groupId>org.springframework</groupId>
+	    		<artifactId>spring-test</artifactId>
+	    		<version>6.0.0-M6</version>
+	    		<scope>test</scope>
+			</dependency>
             <!-- Internal dependencies -->
             <dependency>
                 <groupId>org.apache.wink</groupId>

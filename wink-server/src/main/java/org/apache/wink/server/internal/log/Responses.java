@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.Properties;
 
 import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.WriteListener;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpServletResponseWrapper;
 import javax.ws.rs.core.MultivaluedMap;
@@ -349,5 +350,17 @@ public class Responses implements ResponseHandler {
         public void flush() throws IOException {
             originalRequest.flush();
         }
+
+		@Override
+		public boolean isReady() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public void setWriteListener(WriteListener writeListener) {
+			// TODO Auto-generated method stub
+			
+		}
     }
 }

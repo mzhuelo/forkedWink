@@ -33,6 +33,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import jakarta.servlet.WriteListener;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpServletResponseWrapper;
@@ -224,6 +225,18 @@ public class ContentEncodingResponseFilter implements Filter {
             response.addHeader(HttpHeaders.CONTENT_ENCODING, "gzip"); //$NON-NLS-1$
             response.addHeader(HttpHeaders.VARY, HttpHeaders.ACCEPT_ENCODING);
         }
+
+		@Override
+		public boolean isReady() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public void setWriteListener(WriteListener writeListener) {
+			// TODO Auto-generated method stub
+			
+		}
     }
 
     static class DeflaterContentEncodedOutputStream extends EncodedOutputStream {
@@ -241,6 +254,18 @@ public class ContentEncodingResponseFilter implements Filter {
             response.addHeader(HttpHeaders.CONTENT_ENCODING, "deflate"); //$NON-NLS-1$
             response.addHeader(HttpHeaders.VARY, HttpHeaders.ACCEPT_ENCODING);
         }
+
+		@Override
+		public boolean isReady() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public void setWriteListener(WriteListener writeListener) {
+			// TODO Auto-generated method stub
+			
+		}
     }
 
     static class HttpServletResponseContentEncodingWrapperImpl extends HttpServletResponseWrapper {

@@ -24,7 +24,6 @@
     <groupId>org.apache.wink</groupId>
     <artifactId>wink-assembly-aggregatejar-osgi</artifactId>
     <name>Apache Wink Assembly :: Aggregate JAR OSGi Enabled</name>
-    <packaging>bundle</packaging>
     <parent>
         <groupId>org.apache.wink</groupId>
         <artifactId>wink-assembly</artifactId>
